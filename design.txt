@@ -1,0 +1,24 @@
+REGISTER
+POST /auth/register
+BODY username, password, confirmPassword, email?
+
+LOGIN
+POST /auth/login
+BODY username, password
+
+CREATE TODO
+POST /todo
+HEADER authorization Bearer token
+BODY title, completed?, dueDate?, userId
+RESPONSE 
+200 message
+400 message
+500 message
+
+UPDATE TODO BY ID
+
+DELETE TODO BY ID
+
+GET ALL TODO
+
+GET TODO BY ID
