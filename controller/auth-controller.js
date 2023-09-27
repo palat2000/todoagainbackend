@@ -7,7 +7,7 @@ exports.register = async (req, res, next) => {
   try {
     // validate data
     const { username, email, password, confirmPassword } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 12);
+    const hashedPassword = await bcrypt.hash(password, 15);
     await prisma.user.create({
       data: {
         username,

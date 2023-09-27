@@ -1,10 +1,13 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors");
 const notFoundMiddleware = require("./middleware/not-found");
 const errorMiddleware = require("./middleware/error");
 const authRoute = require("./routes/auth-route");
 const todoRoute = require("./routes/todo-route");
 const app = express();
+
+app.use(cors({ origin: "http://localhost:5173" }));
 
 app.use(express.json());
 

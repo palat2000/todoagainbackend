@@ -5,6 +5,8 @@ const router = express.Router();
 
 router.use(authenticateMiddleware);
 
+router.get("/", todoController.getAllTodo);
+
 router.post("/", todoController.createTodo);
 
 module.exports = router;
